@@ -12,26 +12,13 @@ abstract class TimelineItem extends StatelessWidget {
   const TimelineItem({Key? key, required this.model, required this.properties}) : super(key: key);
 
   double get iconSize {
-    // if no icon is specified, use smaller dot size
-    if (model.icon == null) return TimelineBoxDecoration.DEFAULT_DOT_SIZE;
-    // use [TimelineModel.icon]'s size when timeline is centered
-    if (this is TimelineItemCenter)
-      return model.icon?.size ?? TimelineBoxDecoration.DEFAULT_ICON_SIZE;
-    // use [TimelineProperties.iconSize] timeline is not centered
-    return properties.iconSize;
+    return 24.0;
   }
 
   Icon? get icon {
     if (this is TimelineItemCenter) return model.icon;
     // ignore icon size if timeline is not centered.
-    return Icon(
-      model.icon?.icon,
-      color: model.icon?.color,
-      textDirection: model.icon?.textDirection,
-      key: model.icon?.key,
-      semanticLabel: model.icon?.semanticLabel,
-      size: TimelineBoxDecoration.DEFAULT_ICON_SIZE,
-    );
+    return model.icon;
   }
 }
 
