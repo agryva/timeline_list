@@ -15,7 +15,7 @@ abstract class TimelineItem extends StatelessWidget {
     return 24.0;
   }
 
-  Icon? get icon {
+  dynamic get icon {
     if (this is TimelineItemCenter) return model.icon;
     // ignore icon size if timeline is not centered.
     return model.icon;
