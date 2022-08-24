@@ -12,7 +12,7 @@ abstract class TimelineItem extends StatelessWidget {
   const TimelineItem({Key? key, required this.model, required this.properties}) : super(key: key);
 
   double get iconSize {
-    return 24.0;
+    return 20.0;
   }
 
   dynamic get icon {
