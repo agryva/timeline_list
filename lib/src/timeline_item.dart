@@ -75,7 +75,7 @@ class TimelineItemLeft extends TimelineItem {
 
   @override
   Widget build(BuildContext context) {
-    final margin = properties.iconSize + TimelineBoxDecoration.LINE_GAP * 2;
+    final margin = properties.iconSize + TimelineBoxDecoration.LINE_GAP * 2 + 20;
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return Row(
