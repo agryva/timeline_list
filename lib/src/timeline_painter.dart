@@ -11,7 +11,7 @@ class TimelineBoxDecoration extends Decoration {
 
   static const double DEFAULT_DOT_SIZE = 12.0;
   static const double DEFAULT_ICON_SIZE = 24.0; // default icon size
-  static const double LINE_GAP = 8.0;
+  static const double LINE_GAP = 6.0;
 
   TimelineBoxDecoration(
       {required this.properties,
